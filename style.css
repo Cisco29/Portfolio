@@ -4,6 +4,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'poppins', sans-serif;
+    /* flex-direction: column;  */
 
 }
 body
@@ -288,6 +289,8 @@ section{
     height: 500px;
     padding: 75px 90px;
     margin-left: 120px;
+    
+    
 }
 .heading1 {
     text-align: center;
@@ -340,8 +343,8 @@ section{
     background-color: #0ef;
     position: absolute;
     border-radius: 10px;
-    animation: animateBar 1s 1s cubic-bezier(1,0,0.5,1) forwards;
-    transform: scale(0);
+    animation: animate 1s 1s cubic-bezier(1,0,0.5,1) forwards;
+    transform: scaleX(0);
     transform-origin: left;
 
 }
@@ -372,7 +375,7 @@ section{
     border-radius: 3px;
     top: -28px;
     right: -20px;
-    animation: showText 0.5s 1s linear forwards;
+    animation: showText 0.5s 1.5s linear forwards;
     opacity: 0;
 }
 
@@ -395,20 +398,20 @@ section{
     content: "35%";
 }
 .progress-line span::before{
-    position: absolute;
     content: "";
-    top: -10px;
-    right: 0;
-    height: 0;
+    position: absolute;
     width: 0;
+    height: 0;
     border: 7px solid transparent;
     border-bottom-width: 0px;
     border-right-width: 0px;
     border-top-color: #000;
+    top: -10px;
+    right: 0;
+    animation: showText 0.5s 1.5s linear forwards;
     opacity: 0;
-    animation: showText 0.5s 1s linear forwards;
 }
-@keyframes showText {
+@keyframes showText{
     100%{
         opacity: 1;
     }
@@ -417,8 +420,8 @@ section{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: flex-start;
+   justify-content: space-evenly;
+   align-items: flex-start;
 }
 .radial-bars .radial-bar{
    width: 50%;
@@ -437,11 +440,11 @@ section{
 
 
 
-/* @keyframes showText {
+@keyframes showText {
     100%{
         opacity: 1;
     }
-} */
+} 
 
 
 
