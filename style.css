@@ -295,12 +295,7 @@ section{
     margin-top: 100px;
     margin-right: 50px;
 }
-.container3{
-    width: 600px;
-    height: 500px;
-    /* margin-top: 100px;
-    margin-right: 50px; */
-}
+
 
 
 
@@ -360,6 +355,79 @@ section{
     transform-origin: left;
 
 }
+/* barre bleu pour les professional skills  */
+
+
+.progress-line.Creativity span{
+    width: 90%;
+}
+.progress-line.Communication span{
+    width: 85%;
+}
+.progress-line.Problem-solving span{
+    width: 80%;
+}
+.progress-line.Teamwork span{
+    width: 82%;
+}
+.progress-line.Curiosity span{
+    width: 85%;
+}
+.progress-line.Empathy span{
+    width: 90%;
+}
+.progress-line span::after{
+    position: absolute;
+    padding: 1px 8px;
+    background-color: #000;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 3px;
+    top: -28px;
+    right: -20px;
+    animation: showText 0.5s 1.5s linear forwards;
+    opacity: 0;
+}
+.progress-line.Creativity span::after{
+    content: "90%";
+}
+.progress-line.Communication span::after{
+    content: "85%";
+}
+.progress-line.Problem-solving span::after{
+    content: "80%";
+}
+.progress-line.Teamwork span::after{
+    content: "82%";
+}
+.progress-line.Curiosity span::after{
+    content: "85%";
+}
+.progress-line.Empathy span::after{
+    content: "90%";
+}
+.progress-line span::before{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 7px solid transparent;
+    border-bottom-width: 0px;
+    border-right-width: 0px;
+    border-top-color: #000;
+    top: -10px;
+    right: 0;
+    animation: showText 0.5s 1.5s linear forwards;
+    opacity: 0;
+}
+@keyframes showText{
+    100%{
+        opacity: 1;
+    }
+}
+
+
+/* debut  barre bleu technical skills */
 .progress-line.html span{
     width: 42%;
 }
