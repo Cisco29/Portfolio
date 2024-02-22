@@ -4,7 +4,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'poppins', sans-serif;
-    /* flex-direction: column;  */
+    
 
 }
 body
@@ -275,7 +275,6 @@ background: #081b29;
 }
 
 .services-list div:hover {
-    /* background: #0ef; */
     transform: translateY(-10px);
 }
 
@@ -288,11 +287,17 @@ section{
     width: 600px;
     height: 500px;
     padding: 75px 90px;
-    margin-left: 120px;
-    
-    
-    
+    margin-left: 120px;   
 }
+.container2{
+    width: 600px;
+    height: 500px;
+    margin-top: 100px;
+    margin-right: 50px;
+}
+
+
+
 
 .heading1 {
     text-align: center;
@@ -350,6 +355,79 @@ section{
     transform-origin: left;
 
 }
+/* barre bleu pour les professional skills  */
+
+
+.progress-line.Creativity span{
+    width: 90%;
+}
+.progress-line.Communication span{
+    width: 85%;
+}
+.progress-line.Problem-solving span{
+    width: 80%;
+}
+.progress-line.Teamwork span{
+    width: 82%;
+}
+.progress-line.Curiosity span{
+    width: 85%;
+}
+.progress-line.Empathy span{
+    width: 90%;
+}
+.progress-line span::after{
+    position: absolute;
+    padding: 1px 8px;
+    background-color: #000;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 3px;
+    top: -28px;
+    right: -20px;
+    animation: showText 0.5s 1.5s linear forwards;
+    opacity: 0;
+}
+.progress-line.Creativity span::after{
+    content: "90%";
+}
+.progress-line.Communication span::after{
+    content: "85%";
+}
+.progress-line.Problem-solving span::after{
+    content: "80%";
+}
+.progress-line.Teamwork span::after{
+    content: "82%";
+}
+.progress-line.Curiosity span::after{
+    content: "85%";
+}
+.progress-line.Empathy span::after{
+    content: "90%";
+}
+.progress-line span::before{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 7px solid transparent;
+    border-bottom-width: 0px;
+    border-right-width: 0px;
+    border-top-color: #000;
+    top: -10px;
+    right: 0;
+    animation: showText 0.5s 1.5s linear forwards;
+    opacity: 0;
+}
+@keyframes showText{
+    100%{
+        opacity: 1;
+    }
+}
+
+
+/* debut  barre bleu technical skills */
 .progress-line.html span{
     width: 42%;
 }
@@ -423,13 +501,13 @@ section{
     display: flex;
     flex-wrap: wrap;
    justify-content: space-evenly;
-   align-items: flex-start;
+    align-items: flex-start;
 }
 .radial-bars .radial-bar{
-   width: 50%;
-   height: 170px;
-   margin-bottom: 10px;
-   position: relative;
+    width: 50%;
+    height: 170px;
+    margin-bottom: 10px;
+    position: relative;
 }
 .radial-bars .radial-bar svg{
     position: absolute;
@@ -438,8 +516,37 @@ section{
     transform: translate(-50%,-50%) rotate(-90deg);
     width: 120px;
     height: 160px;
+
+}
+@keyframes animate-bar {
+    100%{
+        stroke-dashoffset: -1;
+    }
 }
 
+@keyframes animate-path-1 {
+    100%{
+        stroke-dashoffset: 50;;
+    }
+}
+
+@keyframes animate-path-2 {
+    100%{
+        stroke-dashoffset: 175;;
+    }
+}
+
+@keyframes animate-path-3 {
+    100%{
+        stroke-dashoffset: 125;;
+    }
+}
+
+@keyframes animate-path-4 {
+    100%{
+        stroke-dashoffset: 75;;
+    }
+}
 
 
 
