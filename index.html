@@ -17,11 +17,11 @@
         <a href="#" class="logo">Porfolio</a>
         
         <nav class="navbar"> 
-            <a href="#" style="--i:1"class="active">Home</a>
-            <a href="#" style="--i:2">About</a>
-            <a href="#" style="--i:3">Skill</a>
-            <a href="#" style="--i:4">Portfolio</a>
-            <a href="#" style="--i:5">Contact</a>
+            <a href="#" style="--i:1" class="active">Home</a>
+            <a href="#about" style="--i:2" id="about-link">About</a>
+            <a href="#Skills" style="--i:3" id="skills-link">Skill</a>
+            <a href="#portfolio" style="--i:4" id="portfolio-link">Portfolio</a>
+            <a href="#contact" style="--i:5" id="contact-link">Contact</a>
 
         </nav>
 
@@ -308,7 +308,38 @@
         
 
 
+              <script>
+                // JavaScript to scroll to the contact section when clicking on the contact link
+                document.getElementById('contact-link').addEventListener('click', function(event) {
+                    event.preventDefault(); // Prevent default behavior of anchor tag
+                    document.querySelector('#contact').scrollIntoView({
+                        behavior: 'smooth' // Smooth scroll to the contact section
+                    });
+                });
+                // JavaScript to scroll to the about section when clicking on the about link
+        document.getElementById('about-link').addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent default behavior of anchor tag
+            document.querySelector('#about').scrollIntoView({
+                behavior: 'smooth' // Smooth scroll to the about section
+            });
+        });
 
+        // JavaScript to scroll to the skills section when clicking on the skills link
+        document.getElementById('skills-link').addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent default behavior of anchor tag
+            document.querySelector('#Skills').scrollIntoView({
+                behavior: 'smooth' // Smooth scroll to the skills section
+            });
+        });
+
+        // JavaScript to scroll to the portfolio section when clicking on the portfolio link
+        document.getElementById('portfolio-link').addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent default behavior of anchor tag
+            document.querySelector('#portfolio').scrollIntoView({
+                behavior: 'smooth' // Smooth scroll to the portfolio section
+            });
+        });
+            </script>
 
 
 
