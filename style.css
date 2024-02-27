@@ -59,6 +59,11 @@ background: #081b29;
     color: #EA28F3;
   
 }
+.responsive-text {
+    color: #EA28F3;
+    font-size: 24px;
+    margin-left: 5px; /* Ajustez la marge selon vos préférences */
+}
 .navbar a::before, .navbar a::after {
     content: '';
     position: absolute;
