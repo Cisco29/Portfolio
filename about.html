@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <style>
+        .pdf-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Assure que la div prend toute la hauteur de l'écran */
+        }
+        .pdf-container img {
+            max-width: 100%; /* La largeur maximale de l'image est de 100% de la largeur de son parent */
+            max-height: 100%; /* La hauteur maximale de l'image est de 100% de la hauteur de son parent */
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">Portfolio</a>
+        
+        <nav class="navbar"> 
+            <a href="index.html" style="--i:1" class="active">Home</a>
+            
+        </nav>
+    </header>
+
+    <div class="pdf-container">
+        <embed src="DÉVELOPPEUR WEB FULL STACK JUNIOR.pdf" type="application/pdf" width="100%" height="600px" />
+
+    </div>
+</body>
+</html>
