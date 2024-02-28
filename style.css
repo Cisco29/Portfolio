@@ -39,7 +39,12 @@ background: #081b29;
     animation: slideRight 1s ease forwards;
 
 }
-
+.navbar {
+    display: flex;
+    justify-content: flex-start; /* Alignement à gauche */
+    align-items: center;
+    /* Autres styles */
+}
 .navbar a {
     display: inline-block;
         font-size: 25px;
@@ -334,6 +339,7 @@ section{
 
 
 
+
 .heading1 {
     text-align: center;
     text-decoration: underline;
@@ -589,7 +595,7 @@ section{
     margin-bottom: 15px;
 }
 .layer p{
-    color: #000;
+    color: #fff;
     font-size: 1rem;
     line-height: 1.8;
 }
