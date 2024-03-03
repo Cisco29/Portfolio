@@ -1,0 +1,238 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  body {
+    min-height: 100vh;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .container {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+    width: 800px;
+    height: 500px;
+    background: #000;
+    transition: 0.25s;
+  }
+  
+  .titre {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: chartreuse;
+    font-size: 44px;
+  }
+  
+  .container .box {
+    position: relative;
+    background: var(--img);
+    background-position: center;
+    background-size: cover;
+    transition: 0.25s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: grayscale(0) brightness(1);
+  }
+  
+  .container:hover .box {
+    filter: grayscale(1);
+  }
+  
+  .container .box:hover {
+    filter: grayscale(0) brightness(1.25);
+  }
+  
+  .container:has(.one:hover) {
+    grid-template-columns: 2fr 0.5fr 0.5fr 0.5fr 0.5fr;
+  }
+  
+  .container:has(.two:hover) {
+    grid-template-columns: 0.5fr 2fr 0.5fr 0.5fr 0.5fr;
+  }
+  
+  .container:has(.three:hover) {
+    grid-template-columns: 0.5fr 0.5fr 2fr 0.5fr 0.5fr;
+  }
+  
+  .container:has(.four:hover) {
+    grid-template-columns: 0.5fr 0.5fr 0.5fr 2fr 0.5fr;
+  }
+  
+  .container:has(.five:hover) {
+    grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr 2fr;
+  }
+  
+  .container .box::before {
+    content: "";
+    position: absolute;
+    top: -1px;
+    width: 100%;
+    height: calc(100% + 2px);
+    background: linear-gradient(#000, transparent, transparent, transparent, #000);
+  }
+  
+  .container .box:nth-child(even) {
+    transform: translateY(30px);
+  }
+  
+  .container .box:nth-child(odd) {
+    transform: translateY(-30px);
+  }
+  
+  .container .box::after {
+    content: attr(data-text);
+    position: absolute;
+    bottom: 100px;
+    background: #fff;
+    color: #000;
+    font-size: 1em;
+    font-weight: 600;
+    padding: 5px 10px;
+    white-space: nowrap;
+    transition: 0.5s;
+    text-transform: uppercase;
+    opacity: 0;
+  }
+  
+  h2 {
+    position: relative;
+    font-size: 1.5em;
+    letter-spacing: 0.05em;
+    cursor: default;
+    text-transform: uppercase;
+    font-weight: 300;
+  }
+  
+  h2 span {
+    color: #555;
+    transition: 0.25s;
+  }
+  
+  h2:hover span {
+    color: #0f0;
+    text-shadow: 0 0 5px #0f0, 0 0 15px #0f0, 0 0 30px #0f0;
+  }
+  
+  
+  h3 {
+    position: relative;
+    font-size: 1.5em;
+    letter-spacing: 0.05em;
+    cursor: default;
+    text-transform: uppercase;
+    font-weight: 300;
+  }
+  
+  h3 span {
+    color: #555;
+    transition: 0.25s;
+  }
+  
+  h3:hover span {
+    color: #0f0;
+    text-shadow: 0 0 5px #0f0, 0 0 15px #0f0, 0 0 30px #0f0;
+  }
+  
+  .titre h3 {
+    font-size: 40px; /* ajustez cette valeur selon vos préférences */
+  }
+  
+  .titre h2 {
+    margin-top: 60px; /* Ajustez cette valeur selon vos besoins */
+  }
+  
+  .header 
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.logo 
+{
+    position: relative;
+    font-size: 25px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: default;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+
+}
+.navbar a {
+    display: inline-block;
+        font-size: 25px;
+        color: #fff;
+        text-decoration: none;
+        font-weight: 500;
+        margin-left: 35px;
+        transition: .3s;
+        opacity: 0;
+        animation: slideTop .5s ease forwards;
+        animation-delay: calc(.2s * var(--i));
+        
+
+}
+.navbar a:hover{
+    color: #EA28F3;
+  
+}
+.responsive-text {
+    color: #EA28F3;
+    font-size: 24px;
+    margin-left: 5px; /* Ajustez la marge selon vos préférences */
+}
+.navbar a::before, .navbar a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 4px;
+    bottom: -4px;
+    background-color: cyan;
+    transition: width 0.3s;
+}
+
+.navbar a::before {
+    left: 70%;
+    transform: translateX(-50%);
+}
+
+.navbar a::after {
+    right: 70%;
+    transform: translateX(50%);
+}
+
+.navbar a:hover::before, .navbar a:hover::after {
+    width: 70%;
+}
+@keyframes slideTop {
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;   
+    }
+}
+
+
