@@ -605,10 +605,10 @@ section{
 }
 
 .layer h5{
-    color: #000;
+    color: #fff;
     font-size: 20px;
     font-weight: 600;
-    margin-bottom: 15px;
+    margin-bottom: 3px;
 }
 .layer p{
     color: #fff;
