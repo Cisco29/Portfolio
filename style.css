@@ -43,8 +43,7 @@ background: #081b29;
     left: 100%;
 }
 
-.logo 
-{
+.logo {
     position: relative;
     font-size: 25px;
     color: #ededed;
@@ -56,11 +55,10 @@ background: #081b29;
     width: 100px;
     border-radius: 25px;
     animation-delay: 1s;
-    display: inline-block; /* Affiche l'élément en ligne */
-    align-items: center;
-    
-
+    display: flex; /* Utiliser un affichage flex pour aligner les éléments sur la même ligne */
+    align-items: center; /* Aligner les éléments verticalement au centre */
 }
+
 .logo-text {
     margin-right: 10px; /* Espacement entre le texte et l'image du logo */
 }
@@ -70,26 +68,27 @@ background: #081b29;
     height: auto; /* Pour conserver le rapport hauteur/largeur */
     border-radius: 25px; /* Ajoutez des coins arrondis à l'image */
 }
+
 .navbar {
     display: flex;
-    justify-content: flex-start; /* Alignement à gauche */
+    justify-content: space-between; /* Utiliser justify-content: space-between pour répartir les éléments sur toute la largeur */
     align-items: center;
-    /* Autres styles */
+   
 }
+
 .navbar a {
     display: inline-block;
-        font-size: 25px;
-        color: #fff;
-        text-decoration: none;
-        font-weight: 500;
-        margin-left: 35px;
-        transition: .3s;
-        opacity: 0;
-        animation: slideTop .5s ease forwards;
-        animation-delay: calc(.2s * var(--i));
-        
-
+    font-size: 35px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 115px;
+    transition: .3s;
+    opacity: 0;
+    animation: slideTop .5s ease forwards;
+    animation-delay: calc(.2s * var(--i));
 }
+
 
 .navbar a:hover{
     color: #EA28F3;
