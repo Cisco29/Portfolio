@@ -53,7 +53,22 @@ background: #081b29;
     cursor: default;
     opacity: 0;
     animation: slideRight 1s ease forwards;
+    width: 100px;
+    border-radius: 25px;
+    animation-delay: 1s;
+    display: inline-block; /* Affiche l'élément en ligne */
+    align-items: center;
+    
 
+}
+.logo-text {
+    margin-right: 10px; /* Espacement entre le texte et l'image du logo */
+}
+
+.logo-image {
+    width: 60px; /* Ajustez la taille de l'image selon vos besoins */
+    height: auto; /* Pour conserver le rapport hauteur/largeur */
+    border-radius: 25px; /* Ajoutez des coins arrondis à l'image */
 }
 .navbar {
     display: flex;
