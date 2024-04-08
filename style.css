@@ -864,3 +864,42 @@ margin-bottom: 3rem;
     }
     
 }
+
+@media only screen and (max-width: 767px) {
+    /* Styles pour les écrans de taille maximale de 767px (téléphones) */
+    .header {
+        padding: 15px 5%; /* Ajustez le padding pour les petits écrans */
+    }
+    .navbar a {
+        font-size: 25px; /* Réduire la taille de la police pour les petits écrans */
+        margin-left: 10px; /* Ajuster la marge pour les petits écrans */
+    }
+    .logo {
+        font-size: 15px; /* Réduire la taille de la police pour les petits écrans */
+        width: 80px; /* Ajuster la taille du logo pour les petits écrans */
+    }
+    .logo-image {
+        width: 30px; /* Ajustez la taille de l'image selon vos besoins */
+        height: auto; /* Pour conserver le rapport hauteur/largeur */
+        border-radius: 25px; /* Ajoutez des coins arrondis à l'image */
+        justify-content: center;
+    }
+    .home {
+        height: 100vh; /* Hauteur de la section égale à la hauteur de l'écran */
+        background-size: cover; /* Redimensionner l'image pour couvrir la totalité de la section */
+        background-position: center center; /* Centrer l'image horizontalement et verticalement */
+    }
+    
+    .home-content {
+        padding: 15px 5%; /* Ajustez le padding pour les petits écrans */
+    }
+    .home-content h3 {
+        font-size: 15px; /* Réduire la taille de la police pour les petits écrans */
+    }
+    .home-content h1 {
+        font-size: 27px; /* Réduire la taille de la police pour les petits écrans */
+    }
+    .home-content p {
+        font-size: 13px; /* Réduire la taille de la police pour les petits écrans */
+    }
+}
